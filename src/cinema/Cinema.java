@@ -12,6 +12,6 @@ public class Cinema {
             System.out.println(j+" S S S S S S S S");
 
         }
-
+        System.out.println("Merging to another");
     }
 }
