@@ -30,49 +30,36 @@ public class Cinema {
             System.out.println();
             number++;
         }
+        number = 1;
+        System.out.println("Enter a row number:");
+        int chosenRow = sc.nextInt();
+        System.out.println("Enter a seat number in that row:");
+        int chosenSeat = sc.nextInt();
+
+        int price = 0;
+
+        int[][] total = new int[chosenRow][chosenSeat];
+
+        int totalSeats = rows * seats;
+        if (totalSeats < 60) {
+            price = 10;
+            System.out.println("Total income: ");
+            System.out.println("$" + price);
+
+        } else if (totalSeats > 60) {
+            int frontRow = rows / 2;
+            if (chosenRow > frontRow) {
+                price = 8;
+                System.out.println("Total income: ");
+                System.out.println("$" + price);
+
+            } else {
+                price = 10;
+                System.out.println("Total income: ");
+                System.out.println("$" + price);
+            }
+        }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
